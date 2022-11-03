@@ -13,6 +13,7 @@ const PostSchema = new Schema({
     branch: String,
     price: Number,
     hashTags: Array,
+    image: String,
     author: String
 });
 

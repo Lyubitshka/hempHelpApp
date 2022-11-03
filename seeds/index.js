@@ -15,6 +15,7 @@ const seedDb = async() => {
         title: 'CBD Bakery',
         description: 'Nice',
         branch: 'Food',
+        image: 'https://res.cloudinary.com/dpx3m7idk/image/upload/v1667489348/YelpCamp/chnxi5lgfg12d6cqqwwb.jpg',
         hashTags: ['sweet', 'sour', 'cbd', 'food']});
     await p.save();
 }

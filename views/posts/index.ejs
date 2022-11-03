@@ -1,7 +1,11 @@
 <%- layout('layouts/boilerplate') %>
 
+    <div class="">
+        <a class="btn btn-primary" href="/posts/new">Add some fresh content!</a>
+    </div>
+
     <h1>Board</h1>
-    <a href="/posts/new">Add some fresh content!</a>
+   
     <ul>
         <% for(let post of posts) { %> 
         <li><a href="/posts/<%= post._id %>"><%= post.title %></a></li>
