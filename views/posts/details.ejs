@@ -1,0 +1,13 @@
+<%- layout('layouts/boilerplate') %>
+
+    <h1><%= post.title %></h1>
+    <h2>description: <%= post.description %></h2>
+    <h3>branch: <%= post.branch %></h3>
+    <h3>#<%= post.hashTags %></h3>
+    <footer>
+        <a href="/posts/<%= post._id %>/edit">Click to Edit</a>
+        <form action="/posts/<%= post._id %>?_method=DELETE" method="POST">
+            <button>Delete Post</button>
+        </form>
+        <a href="/posts">Back to The Board</a>
+    </footer>
