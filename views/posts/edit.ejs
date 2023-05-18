@@ -1,5 +1,5 @@
 <%- layout('layouts/boilerplate') %>
-    <form action="/posts/<%= post._id %>?_method=PUT" method="POST">
+    <form action="/posts/<%= post._id %>?_method=PUT" method="POST" novalidate>
         <div class="">
             <label for="title">Title</label>
             <input type="text" name="post[title]" id="title" value="<%= post.title %>">

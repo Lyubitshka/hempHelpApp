@@ -1,13 +1,18 @@
 <%- layout('layouts/boilerplate') %>
 
-    <div class="">
-        <a class="btn btn-primary" href="/posts/new">Add some fresh content!</a>
-    </div>
+<div class="mb-5">
+  <a class="btn btn-primary" href="/posts/new">Add some fresh content!</a>
+</div>
 
-    <h1>Board</h1>
-   
-    <ul>
-        <% for(let post of posts) { %> 
-        <li><a href="/posts/<%= post._id %>"><%= post.title %></a></li>
-        <% } %> 
-    </ul>
+<h1>Board</h1>
+
+<% for(let post of posts) { %>
+<div class="card mb-3" style="width: 18rem">
+  	<img src="<%= post.image %>" class="card-img-top d-block" alt="..." />
+  	<div class="card-body">
+    	<h5 class="card-title"><%= post.title %></h5>
+    	<p class="card-text"><%= post.hashTags %></p>
+    	<a href="/posts/<%= post._id %>" class="btn btn-primary">Read more</a>
+  	</div>
+</div>
+<% } %>

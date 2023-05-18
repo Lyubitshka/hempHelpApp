@@ -9,7 +9,8 @@ const mongoose = require('mongoose');
 
 const Post = require('./models/post');
 
-mongoose.connect('mongodb://localhost:27017/hemp-help');
+mongoose.set('strictQuery', true);
+mongoose.connect('mongodb://127.0.0.1:27017/hemp-help');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Connection ERROR'));
 db.once('open', () => {
@@ -65,6 +66,6 @@ app.delete('/posts/:id', async(req, res) => {
     res.redirect('/posts');
 });
 
-app.listen(420, () => {
-    console.log("Hemp Help Serving on Port 420");
+app.listen(3000, () => {
+    console.log("Hemp Help Serving on Port 3000");
 });
